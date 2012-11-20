@@ -9,3 +9,16 @@ java -cp target/first-mvn-1.0-SNAPSHOT.jar com.mkayman.mvnbook.App
 
 // effective pom
 mvn help:effective-pom
+
+// Exec plugin
+mvn exec:java -Dexec.mainClass=com.mkayman.mvnbook.App
+
+// Resolved dependencies
+mvn dependency:resolve
+
+// Entire dependency tree
+mvn dependency:tree
+
+// Produce a distributable JAR file, which contains the project's bytecode and all of the dependencies.
+// the assembly:assembly goal is executed after the Maven build reaches the install lifecycle phase
+mvn install assembly:assembly
